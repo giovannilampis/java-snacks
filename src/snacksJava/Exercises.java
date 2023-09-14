@@ -37,25 +37,25 @@ public class Exercises {
 			
 			// array di stringhe contenenti nomi e cognomi casuali.
             
-			String[] nomi = {
-			    "Jay", "Daisy", "Tom", "Jordan", "Myrtle", "Nick", "George", "Meyer", "Lucille", "Pammy"
-			};
-
-			String[] cognomi = {
-			    "Gatsby", "Buchanan", "Wilson", "Carraway", "McKee", "Wolfsheim", "Fay", "Tobey", "Sloane", "Fitzgerald"
-			};
-			
-			Random random = new Random();
-	
-
-			int indiceNomeRandom = random.nextInt(nomi.length);
-			
-			int indiceCognomeRandom = random.nextInt(cognomi.length);
-			
-			String nomeCasuale = nomi[indiceNomeRandom];
-			String cognomeCasuale = cognomi[indiceCognomeRandom];
-
-			System.out.println(nomeCasuale + " " + cognomeCasuale);
+//			String[] nomi = {
+//			    "Jay", "Daisy", "Tom", "Jordan", "Myrtle", "Nick", "George", "Meyer", "Lucille", "Pammy"
+//			};
+//
+//			String[] cognomi = {
+//			    "Gatsby", "Buchanan", "Wilson", "Carraway", "McKee", "Wolfsheim", "Fay", "Tobey", "Sloane", "Fitzgerald"
+//			};
+//			
+//			Random random = new Random();
+//	
+//
+//			int indiceNomeRandom = random.nextInt(nomi.length);
+//			
+//			int indiceCognomeRandom = random.nextInt(cognomi.length);
+//			
+//			String nomeCasuale = nomi[indiceNomeRandom];
+//			String cognomeCasuale = cognomi[indiceCognomeRandom];
+//
+//			System.out.println(nomeCasuale + " " + cognomeCasuale);
 
 
         	
@@ -160,6 +160,28 @@ public class Exercises {
 		// SNACK 6 ->  Dato un numero sotto forma di stringa, convertirlo in intero senza utilizzare funzioni già pronte.
 
 		// Possibile usare solo : cicli, chartAt e if / switch
-
+		
+		
+		
+		
+		
+		// SNACK 7 -> Scrivere un programma che dati dei secondi li converta in ore, minuti, secondi e mostri a video la stringa generata (secondi → “hh:mm:ss”)
+		
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Inserisci il numero di secondi: ");
+        int inputSecondi = scanner.nextInt();
+        
+        // Calcola le ore, i minuti e i secondi
+        int ore = inputSecondi / 3600;
+        int minuti = (inputSecondi % 3600) / 60;
+        int secondi = inputSecondi % 60;
+        
+        // Formatta la stringa risultante nel formato "hh:mm:ss"
+        String tempoFormat = String.format("%02d:%02d:%02d", ore, minuti, secondi);
+        
+        System.out.println("Tempo convertito: " + tempoFormat);
+        
+        scanner.close();
+		
 	}
 }

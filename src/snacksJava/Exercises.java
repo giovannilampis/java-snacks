@@ -262,24 +262,90 @@ public class Exercises {
         // SNACK 9 -> chiedere all'utente numeri interi e calcolarne la somma, 
 		// fino a che essa non superi il valore 1000
 		
-		Scanner input = new Scanner(System.in);
-        int somma = 0;
-        
-        while (somma <= 1000) {
-            System.out.print("Inserisci un numero intero: ");
-            int numero = input.nextInt();
+//		Scanner input = new Scanner(System.in);
+//        int somma = 0;
+//        
+//        while (somma <= 1000) {
+//            System.out.print("Inserisci un numero intero: ");
+//            int numero = input.nextInt();
 
             // Aggiungi il numero alla somma
-            somma += numero;
+		
+//            somma += numero;
             
             // Esci dal ciclo se la somma supera 1000
-            if (somma > 1000) {
-                break; 
-            }
+		
+//            if (somma > 1000) {
+//                break; 
+//            }
+//        }
+//        
+//        System.out.println("La somma dei numeri inseriti supera 1000 ed è pari a " + somma);
+//        input.close();
+		
+		
+		
+		
+		
+		
+		// SNACK 10 -> creare un array di 10 elementi randomici compresi tra 100 e 1000 e stampare:
+
+//		tutti gli elementi pari
+//		tutti gli elementi dispari
+//		tutti gli elementi in indice pari
+//		tutti gli elementi in indice dispari
+		
+		
+       	// Creo un array che conterrà 10 numeri interi
+		
+        int[] array = new int[10];
+        Random rand = new Random();
+
+        // Popolo l'array con numeri casuali compresi tra 100 e 1000
+        
+        for (int i = 0; i < 10; i++) {
+            array[i] = rand.nextInt(901) + 100; // Genera un numero tra 100 e 1000
         }
         
-        System.out.println("La somma dei numeri inseriti supera 1000 ed è pari a " + somma);
-        input.close();
+     // Stampa tutti gli elementi dell'array
+        System.out.println("Tutti gli elementi:");
+        for (int numero : array) {
+            System.out.print(numero + " ");
+        }
+        System.out.println();
+
+        // Stampa tutti gli elementi pari
+        System.out.println("Tutti gli elementi pari:");
+        for (int numero : array) {
+            if (numero % 2 == 0) {
+                System.out.print(numero + " ");
+            }
+        }
+        System.out.println();
+        
+     // Stampa tutti gli elementi dispari
+        System.out.println("Tutti gli elementi dispari:");
+        for (int numero : array) {
+            if (numero % 2 != 0) {
+                System.out.print(numero + " ");
+            }
+        }
+        System.out.println();
+
+        // Stampa tutti gli elementi in indice pari
+        System.out.println("Tutti gli elementi in indice pari:");
+        for (int i = 0; i < 10; i += 2) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        // Stampa tutti gli elementi in indice dispari
+        System.out.println("Tutti gli elementi in indice dispari:");
+        for (int i = 1; i < 10; i += 2) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
 
 	}
 }

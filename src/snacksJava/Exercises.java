@@ -11,6 +11,7 @@ public class Exercises {
 		
 		
 		
+		
 		// SNACK 1 -> Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero successivo
 		
 		// Scanner scanner = new Scanner(System.in);
@@ -27,6 +28,8 @@ public class Exercises {
         
         // scanner.close();
             
+		
+		
             
 		
             
@@ -81,6 +84,9 @@ public class Exercises {
 		
 		
 		
+		
+		
+		
 		// SNACK 4 -> data in input una stringa, verificare se è palindroma oppure no
 		
 //		Scanner scanner = new Scanner(System.in);
@@ -114,6 +120,8 @@ public class Exercises {
 //        }
 //        
 //        return true;
+		
+		
 		
 		
 		
@@ -157,9 +165,13 @@ public class Exercises {
 		
 		
 		
+		
+		
 		// SNACK 6 ->  Dato un numero sotto forma di stringa, convertirlo in intero senza utilizzare funzioni già pronte.
 
 		// Possibile usare solo : cicli, chartAt e if / switch
+		
+		
 		
 		
 		
@@ -186,58 +198,88 @@ public class Exercises {
 		
 		
 		
+		
+		
 		// SNACK 8 -> Creare un array di 10 interi randomici compresi tra 100 e 150. Stampare tutti i valori 
 		// contenuti nell'array (dopo averli inseriti). Stampare inoltre il valore minimo, massimo e la media
 		
 	
 		        
-	   int[] numeri = new int[10];
+//	   int[] numeri = new int[10];
 	   
 	   // Chiedi all'utente di inserire 10 valori compresi tra 100 e 150
 	   
-        System.out.println("Inserisci 10 valori compresi tra 100 e 150: ");
-        
-        Scanner scanner = new Scanner(System.in);
-        
-        for (int i = 0; i < numeri.length; i++) {
-        	
-            numeri[i] = scanner.nextInt();
-            
-            while (numeri[i] < 100 || numeri[i] > 150) {
-                System.out.println("Il valore inserito non è valido. Inserisci un valore compreso tra 100 e 150: ");
-                numeri[i] = scanner.nextInt();
-            }
-        }
+//        System.out.println("Inserisci 10 valori compresi tra 100 e 150: ");
+//        
+//        Scanner scanner = new Scanner(System.in);
+//        
+//        for (int i = 0; i < numeri.length; i++) {
+//        	
+//            numeri[i] = scanner.nextInt();
+//            
+//            while (numeri[i] < 100 || numeri[i] > 150) {
+//                System.out.println("Il valore inserito non è valido. Inserisci un valore compreso tra 100 e 150: ");
+//                numeri[i] = scanner.nextInt();
+//            }
+//        }
+		
+		// scanner.close();
         
         // Stampa tutti i valori contenuti nell'array
-        System.out.println("Valori contenuti nell'array:");
-        for (int i = 0; i < numeri.length; i++) {
-            System.out.println(numeri[i]);
-        }
+        
+//        System.out.println("Valori contenuti nell'array:");
+//        for (int i = 0; i < numeri.length; i++) {
+//            System.out.println(numeri[i]);
+//        }
         
         // Calcola il valore minimo, massimo e la media
-        int minimo = numeri[0];
-        int massimo = numeri[0];
-        int somma = 0;
-        for (int i = 0; i < numeri.length; i++) {
-            if (numeri[i] < minimo) {
-                minimo = numeri[i];
-            }
-            if (numeri[i] > massimo) {
-                massimo = numeri[i];
-            }
-            somma += numeri[i];
-        }
-        double media = somma / numeri.length;
+        
+//        int minimo = numeri[0];
+//        int massimo = numeri[0];
+//        int somma = 0;
+//        for (int i = 0; i < numeri.length; i++) {
+//            if (numeri[i] < minimo) {
+//                minimo = numeri[i];
+//            }
+//            if (numeri[i] > massimo) {
+//                massimo = numeri[i];
+//            }
+//            somma += numeri[i];
+//        }
+//        double media = somma / numeri.length;
 
         // Stampa il valore minimo, massimo e la media
-        System.out.println("Valore minimo: " + minimo);
-        System.out.println("Valore massimo: " + massimo);
-        System.out.println("Media: " + String.format("%.2f", media));
+        
+//        System.out.println("Valore minimo: " + minimo);
+//        System.out.println("Valore massimo: " + massimo);
+//        System.out.println("Media: " + String.format("%.2f", media));
 
 
-		        
-		       
 		
+		
+		
+		        
+        // SNACK 9 -> chiedere all'utente numeri interi e calcolarne la somma, 
+		// fino a che essa non superi il valore 1000
+		
+		Scanner input = new Scanner(System.in);
+        int somma = 0;
+        
+        while (somma <= 1000) {
+            System.out.print("Inserisci un numero intero: ");
+            int numero = input.nextInt();
+
+            // Aggiungi il numero alla somma
+            somma += numero;
+            
+            // Esci dal ciclo se la somma supera 1000
+            if (somma > 1000) {
+                break; 
+            }
+        }
+        
+        System.out.println("La somma dei numeri inseriti supera 1000 ed è pari a " + somma);
+        input.close();
+
 	}
 }

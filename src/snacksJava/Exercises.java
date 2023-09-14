@@ -2,6 +2,8 @@ package snacksJava;
 
 import java.util.Scanner;
 
+import java.util.Random;
+
 public class Exercises {
 
 	public static void main(String[] args) {
@@ -35,17 +37,31 @@ public class Exercises {
 			
 			// array di stringhe contenenti nomi e cognomi casuali.
             
-//            private static final String[] nomi = {
-//            	    "Jay", "Daisy", "Tom", "Jordan", "Myrtle", "Nick", "George", "Meyer", "Lucille", "Pammy"
-//            	};
-//
-//        	private static final String[] cognomi = {
-//        	    "Gatsby", "Buchanan", "Wilson", "Carraway", "McKee", "Wolfsheim", "Fay", "Tobey", "Sloane", "Fitzgerald"
-//        	};
+			String[] nomi = {
+			    "Jay", "Daisy", "Tom", "Jordan", "Myrtle", "Nick", "George", "Meyer", "Lucille", "Pammy"
+			};
+
+			String[] cognomi = {
+			    "Gatsby", "Buchanan", "Wilson", "Carraway", "McKee", "Wolfsheim", "Fay", "Tobey", "Sloane", "Fitzgerald"
+			};
+			
+			Random random = new Random();
+	
+
+			int indiceNomeRandom = random.nextInt(nomi.length);
+			
+			int indiceCognomeRandom = random.nextInt(cognomi.length);
+			
+			String nomeCasuale = nomi[indiceNomeRandom];
+			String cognomeCasuale = cognomi[indiceCognomeRandom];
+
+			System.out.println(nomeCasuale + " " + cognomeCasuale);
+
+
         	
         
         	
-        	
+   
         	
         // SNACK 3 -> Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
 		
@@ -105,37 +121,45 @@ public class Exercises {
 		
 		// SNACK 5 ->  Data una stringa in input, mostrare a video quanti caratteri alfabetici contiene, quanti numeri e quanti simboli non alfanumerici.
 		
-        Scanner scanner = new Scanner(System.in);
-        
-        while (true) {
-            System.out.print("Inserisci una stringa (o 0 per uscire): ");
-            String input = scanner.nextLine();
-            
-            if (input.equals("0")) {
+//        Scanner scanner = new Scanner(System.in);
+//        
+//        while (true) {
+//            System.out.print("Inserisci una stringa (o 0 per uscire): ");
+//            String input = scanner.nextLine();
+//            
+//            if (input.equals("0")) {
                 // Esci dal ciclo se l'utente inserisce "0"
-            	break; 
-            }
-            
-            int caratteriAlfabetici = 0;
-            int numeri = 0;
-            int simboliNonAlfanumerici = 0;
-            
-            for (char carattere : input.toCharArray()) {
-                if (Character.isLetter(carattere)) {
-                    caratteriAlfabetici++;
-                } else if (Character.isDigit(carattere)) {
-                    numeri++;
-                } else {
-                    simboliNonAlfanumerici++;
-                }
-            }
-            
-            System.out.println("Caratteri alfabetici: " + caratteriAlfabetici);
-            System.out.println("Numeri: " + numeri);
-            System.out.println("Simboli non alfanumerici: " + simboliNonAlfanumerici);
-        }
-        
-        scanner.close();
+//            	break; 
+//            }
+//            
+//            int caratteriAlfabetici = 0;
+//            int numeri = 0;
+//            int simboliNonAlfanumerici = 0;
+//            
+//            for (char carattere : input.toCharArray()) {
+//                if (Character.isLetter(carattere)) {
+//                    caratteriAlfabetici++;
+//                } else if (Character.isDigit(carattere)) {
+//                    numeri++;
+//                } else {
+//                    simboliNonAlfanumerici++;
+//                }
+//            }
+//            
+//            System.out.println("Caratteri alfabetici: " + caratteriAlfabetici);
+//            System.out.println("Numeri: " + numeri);
+//            System.out.println("Simboli non alfanumerici: " + simboliNonAlfanumerici);
+//        }
+//        
+//        scanner.close();
+		
+		
+		
+		
+		
+		// SNACK 6 ->  Dato un numero sotto forma di stringa, convertirlo in intero senza utilizzare funzioni già pronte.
+
+		// Possibile usare solo : cicli, chartAt e if / switch
 
 	}
 }

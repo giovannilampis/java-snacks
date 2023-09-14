@@ -167,21 +167,77 @@ public class Exercises {
 		
 		// SNACK 7 -> Scrivere un programma che dati dei secondi li converta in ore, minuti, secondi e mostri a video la stringa generata (secondi → “hh:mm:ss”)
 		
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Inserisci il numero di secondi: ");
-        int inputSecondi = scanner.nextInt();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Inserisci il numero di secondi: ");
+//        int inputSecondi = scanner.nextInt();
         
         // Calcola le ore, i minuti e i secondi
-        int ore = inputSecondi / 3600;
-        int minuti = (inputSecondi % 3600) / 60;
-        int secondi = inputSecondi % 60;
+//        int ore = inputSecondi / 3600;
+//        int minuti = (inputSecondi % 3600) / 60;
+//        int secondi = inputSecondi % 60;
         
         // Formatta la stringa risultante nel formato "hh:mm:ss"
-        String tempoFormat = String.format("%02d:%02d:%02d", ore, minuti, secondi);
+//        String tempoFormat = String.format("%02d:%02d:%02d", ore, minuti, secondi);
+//        
+//        System.out.println("Tempo convertito: " + tempoFormat);
+//        
+//        scanner.close();
+		
+		
+		
+		
+		// SNACK 8 -> Creare un array di 10 interi randomici compresi tra 100 e 150. Stampare tutti i valori 
+		// contenuti nell'array (dopo averli inseriti). Stampare inoltre il valore minimo, massimo e la media
+		
+	
+		        
+	   int[] numeri = new int[10];
+	   
+	   // Chiedi all'utente di inserire 10 valori compresi tra 100 e 150
+	   
+        System.out.println("Inserisci 10 valori compresi tra 100 e 150: ");
         
-        System.out.println("Tempo convertito: " + tempoFormat);
+        Scanner scanner = new Scanner(System.in);
         
-        scanner.close();
+        for (int i = 0; i < numeri.length; i++) {
+        	
+            numeri[i] = scanner.nextInt();
+            
+            while (numeri[i] < 100 || numeri[i] > 150) {
+                System.out.println("Il valore inserito non è valido. Inserisci un valore compreso tra 100 e 150: ");
+                numeri[i] = scanner.nextInt();
+            }
+        }
+        
+        // Stampa tutti i valori contenuti nell'array
+        System.out.println("Valori contenuti nell'array:");
+        for (int i = 0; i < numeri.length; i++) {
+            System.out.println(numeri[i]);
+        }
+        
+        // Calcola il valore minimo, massimo e la media
+        int minimo = numeri[0];
+        int massimo = numeri[0];
+        int somma = 0;
+        for (int i = 0; i < numeri.length; i++) {
+            if (numeri[i] < minimo) {
+                minimo = numeri[i];
+            }
+            if (numeri[i] > massimo) {
+                massimo = numeri[i];
+            }
+            somma += numeri[i];
+        }
+        double media = somma / numeri.length;
+
+        // Stampa il valore minimo, massimo e la media
+        System.out.println("Valore minimo: " + minimo);
+        System.out.println("Valore massimo: " + massimo);
+        System.out.println("Media: " + String.format("%.2f", media));
+
+
+		        
+		       
 		
 	}
 }
